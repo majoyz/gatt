@@ -97,7 +97,7 @@ func (a *Advertisement) unmarshall(b []byte) error {
 			return errors.New("invalid advertise data")
 		}
 		if int(l) <= 1 {
-			return errors.New("invalid advertise data: b: [ % X ]", b)
+			return errors.New("invalid advertise data: b: ", string(b))
 		}
 		d := b[2 : 1+l]
 		switch t {
